@@ -1,8 +1,8 @@
 {
   "name": "swagger-editor-offline",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Cross-platform desktop version of swagger-editor",
-  "main": "./main/main.js",
+  "main": "./main.js",
   "scripts": {
     "postinstall": "postinstall-build editorSrc",
     "start": "cross-env NODE_ENV=development electron --inspect main.js",
@@ -18,14 +18,14 @@
   },
   "keywords": [
     "Electron",
-    "grommet"
+    "swagger"
   ],
   "author": "XuluWarrior",
-  "license": "Copyright",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/XuluWarrior/swagger-editor-offline.gitissues"
+    "url": "https://github.com/XuluWarrior/swagger-editor-offline/issues"
   },
-  "homepage": "https://github.com/XuluWarrior/swagger-editor-offline.git",
+  "homepage": "https://github.com/XuluWarrior/swagger-editor-offline",
   "devDependencies": {
     "cross-env": "^5.0.5",
     "del": "^3.0.0",
@@ -42,6 +42,5 @@
   "dependencies": {
     "electron": "^1.7.9",
     "postinstall-build": "^5.0.1"
-  },
-  "electronDependencies": {}
+  }
 }
