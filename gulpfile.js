@@ -21,6 +21,6 @@ gulp.task('swagger-editor', ['clean:editorSrc'], function () {
 
 gulp.task('clean', ['clean:editorSrc']);
 
-gulp.task('postinstall', ['swagger-editor'], function () {
-    console.log("postinstall");
-});
+gulp.task('build', ['swagger-editor']);
+
+gulp.task('default', ['build']);

@@ -2,7 +2,6 @@
 
 const {app, BrowserWindow} = require('electron');
 
-const isDev = require('electron-is-dev');
 const join = require('path').join;
 
 let mainWindow;
