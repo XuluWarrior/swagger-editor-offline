@@ -29,5 +29,5 @@ swagger-editor-offline
 \* Windows only as on *nix, Electron doesn't install nicely in npm global repository even with sudo
 
 ### Mac
-####Installer####
+#### Installer
 [Swagger.Editor.Offline-0.0.3.dmg](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.0.3/Swagger.Editor.Offline-0.0.3.dmg)
