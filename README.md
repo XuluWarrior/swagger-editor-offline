@@ -4,15 +4,6 @@
 
 This is a [swagger-editor](https://swagger.io/swagger-editor/) wrapper application built using [Electron](https://electronjs.org/).
 
-## To install globally and run the application
-```bash
-# Install globally
-npm install -g swagger-editor-offline
-
-# Run the app
-swagger-editor-offline
-```
-
 ## To run application locally
 ```bash
 # Clone this repository
@@ -24,3 +15,14 @@ npm install
 # Run the app
 npm start
 ```
+
+## To install globally and run the application (Windows only*)
+```bash
+# Install globally
+npm install -g swagger-editor-offline
+
+# Run the app
+swagger-editor-offline
+```
+
+\* On *nix, Electron doesn't install nicely in npm global repository even with sudo
