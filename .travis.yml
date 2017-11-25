@@ -1,16 +1,16 @@
+language: node_js
+node_js: "8"
+
+env: ELECTRON_CACHE=$HOME/.cache/electron ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+
+services: docker
+
+osx_image: xcode9.0
+
 matrix:
   include:
     - os: osx
-      osx_image: xcode9.0
-      language: node_js
-      node_js: "8"
-      env:
-        - ELECTRON_CACHE=$HOME/.cache/electron
-        - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
-
     - os: linux
-      services: docker
-      language: generic
 
 cache:
   directories:
@@ -35,4 +35,4 @@ before_cache:
 
 branches:
   except:
-- "/^v\\d+\\.\\d+\\.\\d+$/"
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
