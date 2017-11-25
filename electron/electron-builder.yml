@@ -10,8 +10,7 @@ directories:
   app: app
 
 publish:
-  - provider: generic
-    url: https://gitlab.com
+  - provider: github
     
 dmg:
   contents:
