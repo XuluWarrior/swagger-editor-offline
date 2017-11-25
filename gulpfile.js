@@ -45,6 +45,6 @@ gulp.task('src', function () {
 });
 
 
-gulp.task('build', ['main', 'package.json', 'src']);
+gulp.task('build', ['postinstall', 'main', 'package.json', 'src']);
 
 gulp.task('default', ['build']);

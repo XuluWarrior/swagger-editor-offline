@@ -10,8 +10,8 @@
     "build:postinstall": "cross-env NODE_ENV=production gulp postinstall",
     "build": "cross-env NODE_ENV=production gulp",
     "pack:dir": "electron-builder --projectDir electron --dir",
-    "pack:darwin": "electron-builder --projectDir electron --mac",
-    "pack:windows": "electron-builder --projectDir electron --win"
+    "pack": "electron-builder --projectDir electron",
+    "release": "npm-run-all clean build \"pack -- {@}\" --"
   },
   "bin": {
     "swagger-editor-offline": "bin/swagger-editor-offline.js"
