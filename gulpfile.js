@@ -16,7 +16,7 @@ gulp.task('clean:editorSrc', function () {
 gulp.task('swagger-editor', ['clean:editorSrc'], function () {
     // swagger-editor-dist doesn't resolve as the package.json main points to swagger-editor.js in the non-existent dist folder
     // Hard code location for now
-//    const swaggerEditorDistDir = require.resolve('swagger-editor-dist');
+//    const swaggerEditorDistDir = path.dirname(require.resolve('swagger-editor-dist'));
     const swaggerEditorDistDir = 'node_modules/swagger-editor-dist';
 
     return gulp.src(swaggerEditorDistDir + "/**/*")
