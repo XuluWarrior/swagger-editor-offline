@@ -30,6 +30,17 @@ script:
     else
       npm run release
     fi
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "BKW5wqAx5i0T7Jg88kCu8jLfk8zhEyG5hcojs6Ex5L0VJNFYiJoOsy3CiuwgvDum/Z3D8SSBHKKTj44BUlRLqj5Mjz9IZooR4PXhexNMx/BOJN8+mwDNtTA/KSlVA/HKKgZB4jC+TCn3YO2Tv1bd0hVgkrbcZG8Ed8PQSRzrKvanSY5sIiBi4jPUezT64k1+TPlMZc8CyrBvHEa8f51Spj1CwFMPp66QKW5PZqsGNnNR8nydltEwwakLyc93Z0nfPLzXG9ZoSpBfUr8XVxmTR/Uxe5/cTy/8T/z6OoMB4GudruOWfUv48RLOO13uEdqaqtB7/kT0VM6YnKD60+2VApp3EZBmSL2RVNyjY1ThZPSRmp41w8G7T47niYxQiA+BrKWXPW9Tfw/RLFkiIVPss4yvlJF+z7Wj+CtvPJSu6OlrelhM4qzmwpCcu97sNevC491xc5595Ugmg7W50j6cymkTxM/bpjqCUutKhRGlU+zTLgBv36SQGKMJqFsEYa27WuQcICy27cZEJb76VPOpZuz6BnENUPGW3fv/yU54DoP+onwAcd2kO3k0lBCdfV4j662fRjALw5kaVtlMg1yn+KTFW6e5MFPPVwz7m41g6hq6SWw3uxbdYiU7O6yGpP7otf6m2CyEslD8CaPcaoCWYJcKYsCAQ3xq39ysJkJcS1g="
+  file_glob: true
+  file: electron/dist/*
+  skip_cleanup: true
+  on:
+    tags: true
+
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
 
