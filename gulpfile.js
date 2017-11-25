@@ -6,10 +6,18 @@ const path = require('path');
 
 const editorSrcDir = "editorSrc";
 const electronSrcDir = "electron/app";
+const electronDistDir = "electron/dist";
 
 gulp.task('clean:editorSrc', function () {
     return del([
         editorSrcDir
+    ]);
+});
+
+gulp.task('clean:electron', function () {
+    return del([
+        electronSrcDir,
+        electronDistDir
     ]);
 });
 
@@ -23,7 +31,7 @@ gulp.task('swagger-editor', ['clean:editorSrc'], function () {
         .pipe(gulp.dest(editorSrcDir));
 });
 
-gulp.task('clean', ['clean:editorSrc']);
+gulp.task('clean', ['clean:editorSrc', 'clean:electron']);
 
 gulp.task('main', function() {
     return gulp.src('./main.js')
