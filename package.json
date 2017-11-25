@@ -1,6 +1,6 @@
 {
   "name": "swagger-editor-offline",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cross-platform desktop version of swagger-editor",
   "main": "./main.js",
   "scripts": {
