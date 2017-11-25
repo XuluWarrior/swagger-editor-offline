@@ -1,7 +1,11 @@
 const gulp = require('gulp');
 const del = require('del');
+const replace = require('gulp-string-replace');
+
+const path = require('path');
 
 const editorSrcDir = "editorSrc";
+const electronSrcDir = "electron/app";
 
 gulp.task('clean:editorSrc', function () {
     return del([
@@ -21,6 +25,26 @@ gulp.task('swagger-editor', ['clean:editorSrc'], function () {
 
 gulp.task('clean', ['clean:editorSrc']);
 
-gulp.task('build', ['swagger-editor']);
+gulp.task('main', function() {
+    return gulp.src('./main.js')
+        .pipe(gulp.dest(electronSrcDir));
+});
+
+gulp.task('postinstall', ['swagger-editor']);
+
+gulp.task('package.json', function () {
+    return gulp.src('./package.json')
+        .pipe(replace('dependencies', 'rendererDependencies'))
+        .pipe(replace('electronDependencies', 'dependencies'))
+        .pipe(gulp.dest(electronSrcDir));
+});
+
+gulp.task('src', function () {
+    return gulp.src(editorSrcDir + "/*", { "base" : "." })
+        .pipe(gulp.dest(electronSrcDir));
+});
+
+
+gulp.task('build', ['main', 'package.json', 'src']);
 
 gulp.task('default', ['build']);

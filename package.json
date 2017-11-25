@@ -4,10 +4,14 @@
   "description": "Cross-platform desktop version of swagger-editor",
   "main": "./main.js",
   "scripts": {
-    "postinstall": "postinstall-build editorSrc",
+    "postinstall": "postinstall-build editorSrc --script build:postinstall",
     "start": "cross-env NODE_ENV=development electron --inspect main.js",
     "clean": "gulp clean",
-    "build": "cross-env NODE_ENV=production gulp"
+    "build:postinstall": "cross-env NODE_ENV=production gulp postinstall",
+    "build": "cross-env NODE_ENV=production gulp",
+    "pack:dir": "electron-builder --projectDir electron --dir",
+    "pack:darwin": "electron-builder --projectDir electron --mac",
+    "pack:windows": "electron-builder --projectDir electron --win"
   },
   "bin": {
     "swagger-editor-offline": "bin/swagger-editor-offline.js"
@@ -41,6 +45,9 @@
   },
   "dependencies": {
     "electron": "^1.7.9",
+    "postinstall-build": "^5.0.1"
+  },
+  "electronDependencies": {
     "postinstall-build": "^5.0.1"
   }
 }
