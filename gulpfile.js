@@ -47,12 +47,12 @@ gulp.task('package.json', function () {
         .pipe(gulp.dest(electronSrcDir));
 });
 
-gulp.task('src', function () {
+gulp.task('src', ['swagger-editor'], function () {
     return gulp.src(editorSrcDir + "/*", { "base" : "." })
         .pipe(gulp.dest(electronSrcDir));
 });
 
 
-gulp.task('build', ['postinstall', 'main', 'package.json', 'src']);
+gulp.task('build', ['main', 'package.json', 'src']);
 
 gulp.task('default', ['build']);
