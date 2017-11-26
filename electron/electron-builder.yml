@@ -2,7 +2,7 @@ appId: org.xuluwarrior.swagger-editor-offline
 copyright: MIT
 productName: Swagger Editor Offline
 
-asar: true
+asar: false
 
 directories:
 #  buildResources: dist-assets/
@@ -25,7 +25,7 @@ dmg:
 mac:
   target:
     - dmg
-#    - zip
+    - zip
   category: public.app-category.tools
 
 win:
