@@ -2,7 +2,7 @@ appId: org.xuluwarrior.swagger-editor-offline
 copyright: MIT
 productName: Swagger Editor Offline
 
-asar: false
+asar: true
 
 directories:
 #  buildResources: dist-assets/
