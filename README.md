@@ -1,5 +1,7 @@
 # swagger-editor-offline
 
+[![Build Status](https://travis-ci.org/XuluWarrior/swagger-editor-offline.svg?branch=master)](https://travis-ci.org/XuluWarrior/swagger-editor-offline)
+
 **A cross-platform desktop version of swagger-editor**
 
 This is a [swagger-editor](https://swagger.io/swagger-editor/) wrapper application built using [Electron](https://electronjs.org/).
