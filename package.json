@@ -34,7 +34,7 @@
   "devDependencies": {
     "cross-env": "^5.1.1",
     "del": "^3.0.0",
-    "electron-builder": "^19.46.4",
+    "electron-builder": "^19.47.1",
     "electron-load-devtool": "^0.5.1",
     "envify": "^4.1.0",
     "gulp": "^3.9.1",
@@ -42,15 +42,15 @@
     "gulp-string-replace": "^0.4.0",
     "gulp-uglify": "^3.0.0",
     "npm-run-all": "^4.1.2",
-    "swagger-editor-dist": "^3.1.17"
+    "swagger-editor-dist": "^3.1.18"
   },
   "dependencies": {
     "electron": "^1.7.9",
-    "electron-updater": "^2.16.1",
+    "electron-updater": "^2.16.3",
     "postinstall-build": "^5.0.1"
   },
   "electronDependencies": {
-    "electron-updater": "^2.16.1",
+    "electron-updater": "^2.16.3",
     "postinstall-build": "^5.0.1"
   }
 }
