@@ -45,7 +45,7 @@
     "swagger-editor-dist": "^3.1.17"
   },
   "dependencies": {
-    "electron": "^1.7.9",
+    "electron": "^1.7.11",
     "electron-updater": "^2.16.1",
     "postinstall-build": "^5.0.1"
   },
