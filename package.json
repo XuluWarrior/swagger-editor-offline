@@ -34,7 +34,7 @@
   "devDependencies": {
     "cross-env": "^5.1.1",
     "del": "^3.0.0",
-    "electron-builder": "^19.47.1",
+    "electron-builder": "^19.55.2",
     "electron-load-devtool": "^0.5.1",
     "envify": "^4.1.0",
     "gulp": "^3.9.1",
@@ -46,11 +46,11 @@
   },
   "dependencies": {
     "electron": "^1.7.11",
-    "electron-updater": "^2.16.3",
+    "electron-updater": "^2.20.1",
     "postinstall-build": "^5.0.1"
   },
   "electronDependencies": {
-    "electron-updater": "^2.16.3",
+    "electron-updater": "^2.20.1",
     "postinstall-build": "^5.0.1"
   }
 }
