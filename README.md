@@ -19,16 +19,18 @@ npm start
 ```
 
 ## Installation
-### Windows
-#### npm*
+### npm* / yarn
 ```bash
 # Install globally
-npm install -g swagger-editor-offline
+# On Windows, npm works e.g. npm install -g swagger-editor-offline
+yarn global add swagger-editor-offline
 
 # Run the app
 swagger-editor-offline
 ```
 \* Windows only as on *nix, Electron doesn't install nicely in npm global repository even with sudo
+
+### Windows
 
 #### Installer
 [swagger-editor-offline-setup-0.0.9.exe](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.0.9/swagger-editor-offline-setup-0.0.9.exe)
