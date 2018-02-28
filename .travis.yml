@@ -35,6 +35,14 @@ script:
       npm run release
     fi
 
+deploy:
+  provider: npm
+  email: npm@xuluwarrior.org
+  api_key:
+    secure: p2bV4gvv1lCRHXnxega4kDRQruZnXzdjhPL6DuR5yrgvZN5gJwu/sH10yQY8xnziSUqbRLqGWQymCGFseuXvpnvtja6UvreCjAhO+ZdN5FxGVZcEy4MMVxZ1+2N4L8zzMoRsirg6t2Bogn4x61/lQBpDRIMvtg8i8GlmmiuYvWX7Z7hxgL0tLYlGPvrtqn3i2HbwvHhZh+K2HGxPEO33YozYfisfUhQKWdtQoc9jJ6SMpPIMnSuswrE2ezVIDO0fJ5y8InEChBTZXPdLAiSENzW83gEvYE61nDVG/T8x2YWrJW6oiiR5Uh9lPVumPiB+GdRsJv2vg/8v+hIeSWhgf2wT/y6WCx6/9vL6pK+TTbTg4GukBleLo7fl0SWj146hIO8P3cC1GlXGfob4gj51RNLtjXiZ4B3gLpSxI7i5nFxSIK+h5vfqagAng1koL1EpZuBe1pDCqyTpN8Uk7LAsoA0ov40bgcVGjXBxG4rbEYXA5kcNh6F4hC/IhjSjC7kNQU5YqpUj7OGDaYTcyDRkebbog8aLgQsZ1ISVGOLujJM1VAjgEnxsMHOqWSu27EUCzltVXhzSlCWjs5fuUJ7syUAns+QkylO7ljvS5+vXr3N4G3LZwvhhX4vxrZDULfrZUczifEggo5f6zF09idffdDqyL51whyM6WpPhYSs5DVc=
+  on:
+    tags: true
+    repo: XuluWarrior/swagger-editor-offline
 #deploy:
 #  provider: releases
 #  api_key:
