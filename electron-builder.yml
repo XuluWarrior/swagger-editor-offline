@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: electron-vite-sample
+appId: org.xuluwarrior.swagger-editor-offline
+productName: Swagger Editor Offline
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: electron-vite-sample
+  executableName: swagger-editor-offline
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
