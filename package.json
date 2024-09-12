@@ -2,17 +2,21 @@
   "name": "swagger-editor-offline",
   "version": "0.0.12",
   "description": "Cross-platform desktop version of swagger-editor",
-  "main": "./main.js",
+  "main": "./out/main/index.js",
   "scripts": {
-    "postinstall": "postinstall-build editorSrc --script build:postinstall",
-    "start": "cross-env NODE_ENV=development electron --inspect main.js",
-    "clean": "gulp clean",
-    "build:postinstall": "cross-env NODE_ENV=production gulp postinstall",
-    "build": "cross-env NODE_ENV=production gulp",
-    "pack:dir": "electron-builder --projectDir electron --dir",
-    "pack": "electron-builder --projectDir electron",
-    "release:prepare": "npm version patch -m \"Release: %s\"",
-    "release": "npm-run-all clean build \"pack -- {@}\" --"
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "electron-vite build && electron-builder --win",
+    "build:mac": "electron-vite build && electron-builder --mac",
+    "build:linux": "electron-vite build && electron-builder --linux"
   },
   "bin": {
     "swagger-editor-offline": "bin/swagger-editor-offline.js"
@@ -31,26 +35,29 @@
     "url": "https://github.com/XuluWarrior/swagger-editor-offline/issues"
   },
   "homepage": "https://github.com/XuluWarrior/swagger-editor-offline",
-  "devDependencies": {
-    "@ladjs/gulp-envify": "2.0.1",
-    "cross-env": "^5.1.1",
-    "del": "^3.0.0",
-    "electron-builder": "^19.55.2",
-    "electron-load-devtool": "^0.5.1",
-    "envify": "^4.1.0",
-    "gulp": "^3.9.1",
-    "gulp-string-replace": "^0.4.0",
-    "gulp-uglify": "^3.0.0",
-    "npm-run-all": "^4.1.2",
-    "swagger-editor-dist": "^3.1.18"
-  },
   "dependencies": {
-    "electron": "^1.8.4",
-    "electron-updater": "^2.20.1",
-    "postinstall-build": "^5.0.1"
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^3.0.0",
+    "electron-updater": "^6.3.4",
+    "swagger-editor-dist": "^4.13.1"
   },
-  "electronDependencies": {
-    "electron-updater": "^2.20.1",
-    "postinstall-build": "^5.0.1"
+  "devDependencies": {
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@electron-toolkit/eslint-config-ts": "^2.0.0",
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/node": "^22.5.4",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^31.6.0",
+    "electron-builder": "^25.0.5",
+    "electron-vite": "^2.3.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.35.2",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.3"
   }
 }

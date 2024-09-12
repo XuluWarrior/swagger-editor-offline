@@ -11,7 +11,9 @@ let mainWindow;
 
 
 function createWindow () {
-    mainWindow = new BrowserWindow({width: 1200, height: 1500});
+    mainWindow = new BrowserWindow(
+      {width: 1200, height: 1500, webPreferences: {
+          nodeIntegration: true, contextIsolation: false}});
 
     mainWindow.loadURL('file://' + __dirname + '/editorSrc/index.html');
 
