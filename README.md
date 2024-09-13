@@ -4,8 +4,6 @@
 
 **A cross-platform desktop version of swagger-editor**
 
-This is a [swagger-editor](https://swagger.io/swagger-editor/) wrapper application built using [Electron](https://electronjs.org/).
-
 ## To run application locally
 ```bash
 # Clone this repository
@@ -15,7 +13,7 @@ cd swagger-editor-offline
 # Install dependencies
 npm install
 # Run the app
-npm start
+npm run dev
 ```
 
 ## Installation
@@ -44,3 +42,16 @@ swagger-editor-offline
 ### Linux
 #### AppImage
 [swagger-editor-offline-0.0.9-x86_64.AppImage](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.0.9/swagger-editor-offline-0.0.9-x86_64.AppImage)
+
+## Build
+
+```bash
+# For windows
+$ npm run build:win
+
+# For macOS
+$ npm run build:mac
+
+# For Linux
+$ npm run build:linux
+```
