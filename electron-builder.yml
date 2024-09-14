@@ -13,6 +13,9 @@ asarUnpack:
   - resources/**
 win:
   executableName: swagger-editor-offline
+  target:
+    - nsis
+    - portable
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
