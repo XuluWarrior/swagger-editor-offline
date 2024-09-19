@@ -9,13 +9,10 @@ env:
 
 services: docker
 
-osx_image: xcode14.2
-dist: jammy
-
 matrix:
   include:
-    - os: osx
-    - os: linux
+    - osx_image: xcode14.2
+    - dist: jammy
 
 cache:
   directories:
