@@ -11,8 +11,10 @@ services: docker
 
 matrix:
   include:
-    - osx_image: xcode14.2
-    - dist: jammy
+    - os: osx
+      osx_image: xcode14.2
+    - os: linux
+      dist: jammy
 
 cache:
   directories:
