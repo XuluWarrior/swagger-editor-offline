@@ -1,4 +1,4 @@
-import { Menu, shell } from 'electron'
+import { Menu, MenuItemConstructorOptions, shell } from 'electron'
 
 import { clearEditor, importFile } from "./commands";
 
@@ -63,7 +63,7 @@ const template = [
       },
     ]
   }
-]
+] as MenuItemConstructorOptions[]
 
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
