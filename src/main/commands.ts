@@ -29,3 +29,7 @@ export async function importFile() {
     }
   }
 }
+
+export async function clearEditor() {
+  BrowserWindow.getFocusedWindow()!.webContents.send('update-spec', '')
+}

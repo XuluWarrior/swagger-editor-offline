@@ -1,6 +1,6 @@
 import { Menu, shell } from 'electron'
 
-import { importFile } from "./commands";
+import { clearEditor, importFile } from "./commands";
 
 const isMac = process.platform === 'darwin'
 
@@ -12,6 +12,10 @@ const template = [
       {
         label: 'Import file',
         click: importFile
+      },
+      {
+        label: 'Clear editor',
+        click: clearEditor
       },
       { type: 'separator' },
       isMac ? { role: 'close' } : { role: 'quit' }
