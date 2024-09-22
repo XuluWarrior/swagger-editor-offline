@@ -1,8 +1,22 @@
 import { Menu, shell } from 'electron'
 
+import { importFile } from "./commands";
+
+const isMac = process.platform === 'darwin'
+
 const template = [
   { role: 'appMenu'},
-  { role: 'fileMenu' },
+  {
+    label: 'File',
+    submenu: [
+      {
+        label: 'Import file',
+        click: importFile
+      },
+      { type: 'separator' },
+      isMac ? { role: 'close' } : { role: 'quit' }
+    ]
+  },
   { role: 'editMenu' },
   { role: 'viewMenu' },
   { role: 'windowMenu' },
