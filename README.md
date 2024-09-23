@@ -31,17 +31,17 @@ swagger-editor-offline
 ### Windows
 
 #### Installer
-[swagger-editor-offline-setup-0.1.1.exe](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.1.1/swagger-editor-offline-0.1.1-setup.exe)
+[swagger-editor-offline-setup-0.2.0.exe](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.2.0/swagger-editor-offline-0.2.0-setup.exe)
 #### Portable EXE
-[swagger-editor-offline-0.1.1.exe](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.1.1/Swagger.Editor.Offline.0.1.1.exe)
+[swagger-editor-offline-0.2.0.exe](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.2.0/Swagger.Editor.Offline.0.2.0.exe)
 
 ### Mac
 #### Installer
-[swagger-editor-offline-0.1.1.dmg](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.1.1/swagger-editor-offline-0.1.1.dmg) - Currently unsigned
+[swagger-editor-offline-0.2.0.dmg](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.2.0/swagger-editor-offline-0.2.0.dmg) - Currently unsigned
 
 ### Linux
 #### AppImage
-[swagger-editor-offline-0.1.1.AppImage](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.1.1/swagger-editor-offline-0.1.1.AppImage)
+[swagger-editor-offline-0.2.0.AppImage](https://github.com/XuluWarrior/swagger-editor-offline/releases/download/v0.2.0/swagger-editor-offline-0.2.0.AppImage)
 
 ## Build
 
