@@ -3,6 +3,8 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
+import './menus'
+
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

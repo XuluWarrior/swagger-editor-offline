@@ -2,6 +2,8 @@ import 'swagger-editor-dist/swagger-editor.css'
 import SwaggerEditorBundle from "swagger-editor-dist/swagger-editor-bundle.js";
 import SwaggerEditorStandalonePreset from "swagger-editor-dist/swagger-editor-standalone-preset.js";
 
+import electronMenus from './plugins/electron-menus'
+
 window.onload = function() {
   // Build a system\
   const editor = window.SwaggerEditorBundle({
@@ -9,6 +11,9 @@ window.onload = function() {
     layout: 'StandaloneLayout',
     presets: [
       window.SwaggerEditorStandalonePreset
+    ],
+    plugins: [
+      electronMenus
     ]
   });
 
