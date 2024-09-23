@@ -1,6 +1,6 @@
 import { Menu, MenuItemConstructorOptions, shell } from 'electron'
 
-import { clearEditor, importFile } from "./commands";
+import { clearEditor, importFile, importURL } from "./commands";
 
 const isMac = process.platform === 'darwin'
 
@@ -13,6 +13,11 @@ const template = [
         label: 'Import file',
         click: importFile
       },
+      {
+        label: 'Import URL',
+        click: importURL
+      },
+      { type: 'separator' },
       {
         label: 'Clear editor',
         click: clearEditor
