@@ -1,6 +1,6 @@
 import { Menu, MenuItemConstructorOptions, shell } from 'electron'
 
-import { clearEditor, importFile, importURL } from "./commands";
+import {clearEditor, importFile, importURL, saveAs} from "./commands";
 
 const isMac = process.platform === 'darwin'
 
@@ -16,6 +16,11 @@ const template = [
       {
         label: 'Import URL',
         click: importURL
+      },
+      { type: 'separator' },
+      {
+        label: 'Save As...',
+        click: saveAs
       },
       { type: 'separator' },
       {

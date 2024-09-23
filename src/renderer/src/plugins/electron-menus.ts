@@ -1,6 +1,9 @@
 type System = {
   specActions: {
     updateSpec: (spec: string) => void
+  },
+  specSelectors: {
+    specStr: () => string
   }
 }
 
@@ -9,6 +12,7 @@ class ElectronMenus {
 
   constructor() {
     window.electron.ipcRenderer.on("update-spec", this.updateSpec);
+    window.electron.ipcRenderer.on("send-spec", this.sendSpec);
     this.overridePrompt()
   }
 
@@ -24,6 +28,10 @@ class ElectronMenus {
     }
   }
 
+  sendSpec = () => {
+    const spec =  this.system.specSelectors.specStr();
+    window.electron.ipcRenderer.send('spec-str', spec)
+  }
 
   updateSpec = (_event, spec)  => {
     this.system.specActions.updateSpec(spec);
