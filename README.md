@@ -1,6 +1,6 @@
 # swagger-editor-offline
 
-[![Build Status](https://travis-ci.org/XuluWarrior/swagger-editor-offline.svg?branch=master)](https://travis-ci.org/XuluWarrior/swagger-editor-offline)
+[![Build Status](https://github.com/XuluWarrior/swagger-editor-offline/actions/workflows/build.yml/badge.svg)](https://github.com/XuluWarrior/swagger-editor-offline/actions)
 
 **A cross-platform desktop version of swagger-editor**
 
