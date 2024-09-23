@@ -9,7 +9,21 @@ class ElectronMenus {
 
   constructor() {
     window.electron.ipcRenderer.on("update-spec", this.updateSpec);
+    this.overridePrompt()
   }
+
+  overridePrompt() {
+    const originalPrompt = window.prompt;
+    window.prompt = message => {
+      if (message === "Enter the URL to import from:") {
+        window.electron.ipcRenderer.invoke('import-url');
+        return "";
+      } else {
+        return originalPrompt(message);
+      }
+    }
+  }
+
 
   updateSpec = (_event, spec)  => {
     this.system.specActions.updateSpec(spec);
