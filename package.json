@@ -38,6 +38,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
+    "electron-prompt": "^1.7.0",
     "electron-updater": "^6.3.4",
     "is-json": "^2.0.1",
     "js-yaml": "^4.1.0",
@@ -47,6 +48,7 @@
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
     "@electron-toolkit/eslint-config-ts": "^2.0.0",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/electron-prompt": "^1.6.5",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.5.4",
     "@types/react": "^18.3.5",
